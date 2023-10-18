@@ -1,0 +1,19 @@
+@import "../../scss/variables/colors.module.scss";
+.UnderMainInfo {
+  display: flex;
+  gap: 24px;
+
+  &_left {
+    h1 {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      opacity: 6.5;
+    }
+  }
+}

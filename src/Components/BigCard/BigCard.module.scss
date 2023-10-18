@@ -1,0 +1,31 @@
+@import "../../scss/variables/colors.module.scss";
+.BigCard {
+  width: 380px;
+  transition: 200ms;
+  &_image {
+    border-radius: 6px;
+    overflow: hidden;
+    height: 470px;
+    margin-bottom: 1rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  h1 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    opacity: 0.65;
+  }
+}
+.BigCard:hover {
+  transform: scale(1.02);
+}

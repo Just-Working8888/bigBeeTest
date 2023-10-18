@@ -1,0 +1,36 @@
+@import "../../scss/variables/colors.module.scss";
+
+.card{
+    width: 100%;
+    box-shadow: 0px 5px 5px 1px #ccc;
+    // margin: 20px;
+
+    .extra_icon{
+        color: $primary50;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    &_item{
+        display: flex; 
+        justify-content: space-between;
+    }
+
+    &_item.danger{
+        background-color: $error;
+        color: $white;
+        position: relative;
+        z-index: 2;
+    }
+
+    .danger::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(100% + 48px);
+        background-color: $error;
+        height: 100%;
+        z-index: -1;
+        left: -24px;
+    }
+}

@@ -1,0 +1,48 @@
+@import "../../scss/variables/colors.module.scss";
+.footer {
+  padding: 50px;
+  border-top: 1px solid $borderColor;
+  display: flex;
+  justify-content: space-between;
+  &_left {
+    width: 100%;
+    &_logo {
+      width: 40px;
+      height: 40px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    h1 {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      opacity: 0.65;
+    }
+  }
+  &_rows {
+    width: 100%;
+
+    &_column {
+      h3 {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        border-bottom: 1px solid $borderColor;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        width: 80%;
+      }
+      p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        opacity: 0.65;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../scss/variables/colors.module.scss";
+
+.sidebar{
+    border-right: 1px solid $borderColor;
+    min-height: 100dvh;
+    height: 100dvh;
+    background-color: $white !important;
+}

@@ -1,0 +1,9 @@
+@import "../../scss/variables/colors.module.scss";
+
+.contentWrap {
+  height: 100%;
+  margin: 15px;
+  padding: 1px;
+  border-radius: 4px;
+  border: 1px solid $borderColor
+}

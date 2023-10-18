@@ -1,0 +1,24 @@
+@import "../../scss/variables/colors.module.scss";
+
+.mixedInput {
+  &_select > div {
+    border-radius: 0 !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    border-right: none !important;
+  }
+  &_select > div:hover {
+    border-right: none !important;
+  }
+  &_button {
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-color: $borderColor;
+
+    &:hover {
+      border-color: $primaryblack !important;
+    }
+  }
+}

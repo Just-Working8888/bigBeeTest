@@ -1,7 +1,7 @@
 @import "../../scss/variables/colors.module.scss";
 .ProductCard {
   transition: 200ms;
-  width: 280px;
+  flex: 1 1 190px;
   text-align: center;
   &_image {
     border-radius: 6px;

@@ -1,7 +1,8 @@
 @import "../../scss/variables/colors.module.scss";
 .BigCard {
-  width: 380px;
+  // width: 380px;
   transition: 200ms;
+  flex: 1 1 190px;
   &_image {
     border-radius: 6px;
     overflow: hidden;

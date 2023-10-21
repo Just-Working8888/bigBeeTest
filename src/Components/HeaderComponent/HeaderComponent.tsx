@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 import classes from "./HeaderComponent.module.scss";
 import logo from "../../assets/icon/logo-removebg-preview.png";
 import { navCategories } from "data/categories/navCategories";
-import { SearchOutlined, ShoppingOutlined, UserOutlined } from "@ant-design/icons";
+import {
+  MenuOutlined,
+  SearchOutlined,
+  ShoppingOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 const { Header } = Layout;
 
 type Props = {};
@@ -38,7 +43,9 @@ const HeaderComponent: FC<Props> = () => {
           />
         </Space>
         <div>
-          <h2>Free delivery on orders above $50</h2>
+          <h2 className={classes.header_top_inf}>
+            Free delivery on orders above $50
+          </h2>
         </div>
         <div>
           <h2>Help & Contact</h2>
@@ -46,6 +53,10 @@ const HeaderComponent: FC<Props> = () => {
         </div>
       </header>
       <Header className={classes.header}>
+        <div className={classes.header_small}>
+          <MenuOutlined />
+          <SearchOutlined />
+        </div>
         <div className={classes.header_rightBar}>
           <div className={classes.header_rightBar_logo}>
             <img src={logo} alt="" />

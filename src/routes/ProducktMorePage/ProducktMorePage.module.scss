@@ -1,0 +1,148 @@
+@import "../../scss/variables/colors.module.scss";
+.main {
+  padding: 50px;
+  &_produckt {
+    display: flex;
+    gap: 48px;
+
+    &_image {
+      display: block;
+      width: 50%;
+      height: 500px;
+      border-radius: 6px;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+      }
+    }
+    &_inf {
+      max-width: 50%;
+      &_title {
+        padding: 24px 0;
+        h1 {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          color: #000000a6;
+        }
+        h2 {
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 600;
+        }
+      }
+      &_price {
+        padding-bottom: 24px;
+        border-bottom: 1px solid $borderColor;
+        display: flex;
+        justify-content: space-between;
+        div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          h1 {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            margin: 0 !important;
+          }
+          h2 {
+            margin: 0 !important;
+            color: #000000a6;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            text-decoration: underline;
+          }
+        }
+        h1 {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          u {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            text-decoration: line-through;
+          }
+        }
+      }
+      &_form {
+        margin: 24px 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        &_select {
+          width: 100%;
+          h1 {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+      }
+      &_button {
+        display: flex;
+        gap: 8px;
+
+        padding-bottom: 24px;
+        border-bottom: 1px solid $borderColor;
+      }
+      &_dop {
+        padding: 24px 0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        color: #000000a6;
+        border-bottom: 1px solid $borderColor;
+        h1 {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+        }
+        ul {
+          padding: 0 30px;
+          li {
+            list-style: circle;
+          }
+        }
+      }
+    }
+  }
+  &_reviews {
+    display: flex;
+    max-width: 1280px;
+    margin: 24px auto;
+    gap: 48px;
+    &_add {
+      width: 45vw;
+      padding: 24px;
+      height: fit-content;
+      border-radius: 8px;
+      background: var(--colorFillAlter, rgba(0, 0, 0, 0.02));
+      &_prog {
+        padding: 24px 0;
+        &_item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+      &_title {
+        h1 {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+        }
+        p {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

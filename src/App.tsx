@@ -7,6 +7,7 @@ import Logs from 'routes/Logs/Logs';
 import './scss/app.scss';
 import Incidents from 'routes/Incidents/Incidents';
 import MainPage from 'routes/MainPage/MainPage';
+import ProducktMorePage from 'routes/ProducktMorePage/ProducktMorePage';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/events' element={<Protected><Events /></Protected>} />
         <Route path='/logs' element={<Protected><Logs/></Protected>} />
         <Route path='/incidents' element={<Protected><Incidents/></Protected>} />
+        <Route path='/productmore' element={<Protected><ProducktMorePage/></Protected>} />
       </Route>
 
       <Route path='*' element={<main className={'errorPage'}><p>Неверный адрес</p></main>}/>

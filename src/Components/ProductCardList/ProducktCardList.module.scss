@@ -1,0 +1,27 @@
+.preVue {
+  max-width: 1280px;
+  margin: 48px auto;
+  &_head {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    margin-bottom: 1rem;
+    h1 {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+    }
+    a {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+    }
+  }
+  &_content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

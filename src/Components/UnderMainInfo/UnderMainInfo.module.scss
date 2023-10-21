@@ -17,3 +17,17 @@
     }
   }
 }
+
+@media (max-width: 668px) {
+  .UnderMainInfo {
+    flex-direction: column;
+    div {
+      span {
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

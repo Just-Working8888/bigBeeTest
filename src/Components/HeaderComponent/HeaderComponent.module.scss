@@ -5,7 +5,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  border-bottom: 1px solid $borderColor;
+  &_small {
+    display: none;
+  }
   &_menu {
     display: flex;
     flex-direction: column;
@@ -52,7 +55,7 @@
       }
     }
   }
-  &_leftBar{
+  &_leftBar {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -75,5 +78,27 @@
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_top {
+    &_inf {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 515px) {
+  .header {
+    &_small {
+      display: flex;
+      gap: 1rem;
+    }
+    &_rightBar {
+      &_categories {
+        display: none;
+      }
+    }
   }
 }

@@ -10,7 +10,10 @@ import BigCard from "Components/BigCard/BigCard";
 import { Link } from "react-router-dom";
 import ProductCard from "Components/ProducktCard/ProducktCard";
 
-const MainPage = () => {
+import { FC } from "react";
+import ProducktCardList from "Components/ProductCardList/ProductCardList";
+
+const MainPage: FC = () => {
   const { indentKey, indentValues } = useAppSelector(
     (state) => state.windowState
   );
@@ -41,7 +44,10 @@ const MainPage = () => {
         ))}
       </section>
       <section
-        style={{ width: "40vw", margin: "48px 0 48px 0", padding: "0 2.8rem" }}
+        style={{
+          maxWidth: "1280px",
+          margin: "48px auto 48px auto",
+        }}
       >
         <UnderMainInfo
           icon={null}
@@ -59,104 +65,54 @@ const MainPage = () => {
           />
         ))}
       </section>
-      <section className={classes.main_preVue}>
-        <div className={classes.main_preVue_head}>
-          <h1>Similiar Products</h1>
-          <Link to={"#"}>See everything</Link>
-        </div>
-        <div className={classes.main_preVue_content}>
-          {producktData.map((item) => (
-            <ProductCard
-              key={item.id}
-              title={item.title}
-              price={item.price}
-              lastPrice={item.lastPrice}
-              image={item.image}
-              name={item.name}
-            />
-          ))}
-        </div>
-      </section>
-      <section className={classes.main_preVue}>
-        <div className={classes.main_preVue_head}>
-          <h1>Similiar Products</h1>
-          <Link to={"#"}>See everything</Link>
-        </div>
-        <div className={classes.main_preVue_content}>
-          {producktData.map((item) => (
-            <ProductCard
-              key={item.id}
-              title={item.title}
-              price={item.price}
-              lastPrice={item.lastPrice}
-              image={item.image}
-              name={item.name}
-            />
-          ))}
-        </div>
-      </section>
-      <section className={classes.main_media}>
-        <div className={classes.main_media_left}>
-          <h1>Final stock. Up to 50% off.</h1>
-          <Button type="primary" style={{ color: "black" }}>
-            Shop now
-          </Button>
-        </div>
-        <div className={classes.main_media_rigth}>
-          <div className={classes.main_media_rigth_leftImages}>
-            <br />
-            <br />
-            <br />
-            <div className={classes.main_media_rigth_leftImages_image}>
-              <img
-                src="https://cdn-almcc.nitrocdn.com/bzuhBsmvJjyUaJIXurkHPMzfMQTmmTYd/assets/images/optimized/rev-22dba06/packagingbee.com/wp-content/uploads/2023/09/What-Is-E-Commerce-Packaging.jpg"
-                alt=""
-              />
+      <ProducktCardList />
+      <ProducktCardList />
+      <div className={classes.main_bg}>
+        <section className={classes.main_bg_media}>
+          <div className={classes.main_bg_media_left}>
+            <h1>Final stock. Up to 50% off.</h1>
+            <Button type="primary" style={{ color: "black" }}>
+              Shop now
+            </Button>
+          </div>
+          <div className={classes.main_bg_media_rigth}>
+            <div className={classes.main_bg_media_rigth_leftImages}>
+              <br />
+              <br />
+              <br />
+              <div className={classes.main_bg_media_rigth_leftImages_image}>
+                <img
+                  src="https://cdn-almcc.nitrocdn.com/bzuhBsmvJjyUaJIXurkHPMzfMQTmmTYd/assets/images/optimized/rev-22dba06/packagingbee.com/wp-content/uploads/2023/09/What-Is-E-Commerce-Packaging.jpg"
+                  alt=""
+                />
+              </div>
+              <div className={classes.main_bg_media_rigth_leftImages_image}>
+                <img
+                  src="https://cdn-almcc.nitrocdn.com/bzuhBsmvJjyUaJIXurkHPMzfMQTmmTYd/assets/images/optimized/rev-22dba06/packagingbee.com/wp-content/uploads/2023/09/What-Is-E-Commerce-Packaging.jpg"
+                  alt=""
+                />
+              </div>
             </div>
-            <div className={classes.main_media_rigth_leftImages_image}>
-              <img
-                src="https://cdn-almcc.nitrocdn.com/bzuhBsmvJjyUaJIXurkHPMzfMQTmmTYd/assets/images/optimized/rev-22dba06/packagingbee.com/wp-content/uploads/2023/09/What-Is-E-Commerce-Packaging.jpg"
-                alt=""
-              />
+            <div className={classes.main_bg_media_rigth_rigthImages}>
+              <div className={classes.main_bg_media_rigth_rigthImages_image}>
+                {" "}
+                <img
+                  src="https://cdn-almcc.nitrocdn.com/bzuhBsmvJjyUaJIXurkHPMzfMQTmmTYd/assets/images/optimized/rev-22dba06/packagingbee.com/wp-content/uploads/2023/09/What-Is-E-Commerce-Packaging.jpg"
+                  alt=""
+                />
+              </div>
+              <div className={classes.main_bg_media_rigth_rigthImages_image}>
+                {" "}
+                <img
+                  src="https://cdn-almcc.nitrocdn.com/bzuhBsmvJjyUaJIXurkHPMzfMQTmmTYd/assets/images/optimized/rev-22dba06/packagingbee.com/wp-content/uploads/2023/09/What-Is-E-Commerce-Packaging.jpg"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
-          <div className={classes.main_media_rigth_rigthImages}>
-            <div className={classes.main_media_rigth_rigthImages_image}>
-              {" "}
-              <img
-                src="https://cdn-almcc.nitrocdn.com/bzuhBsmvJjyUaJIXurkHPMzfMQTmmTYd/assets/images/optimized/rev-22dba06/packagingbee.com/wp-content/uploads/2023/09/What-Is-E-Commerce-Packaging.jpg"
-                alt=""
-              />
-            </div>
-            <div className={classes.main_media_rigth_rigthImages_image}>
-              {" "}
-              <img
-                src="https://cdn-almcc.nitrocdn.com/bzuhBsmvJjyUaJIXurkHPMzfMQTmmTYd/assets/images/optimized/rev-22dba06/packagingbee.com/wp-content/uploads/2023/09/What-Is-E-Commerce-Packaging.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className={classes.main_preVue}>
-        <div className={classes.main_preVue_head}>
-          <h1>Similiar Products</h1>
-          <Link to={"#"}>See everything</Link>
-        </div>
-        <div className={classes.main_preVue_content}>
-          {producktData.map((item) => (
-            <ProductCard
-              key={item.id}
-              title={item.title}
-              price={item.price}
-              lastPrice={item.lastPrice}
-              image={item.image}
-              name={item.name}
-            />
-          ))}
-        </div>
-      </section>
-      
+        </section>
+      </div>
+      <ProducktCardList />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { FC } from "react";
 import classes from "./ProduckCard.module.scss";
+import { useNavigate } from "react-router-dom";
 interface Props {
   image: string;
   title: string;
@@ -9,8 +10,12 @@ interface Props {
 }
 
 const ProductCard: FC<Props> = ({ image, title, name, price, lastPrice }) => {
+  const navigate = useNavigate();
   return (
-    <div className={classes.ProductCard}>
+    <div
+      onClick={() => navigate("/productmore")}
+      className={classes.ProductCard}
+    >
       <div className={classes.ProductCard_image}>
         <img src={image} alt={title} />
       </div>

@@ -3,6 +3,7 @@ import windowStateReducer from './slices/windowStateSlice';
 import eventsStateReducer from './slices/eventsSlice';
 import periodReducer from './slices/currentPeriodSlice';
 import mainReducer from './slices/mainSlice';
+import authReducer from './slices/authSlice';
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     eventsState: eventsStateReducer,
     period: periodReducer,
     main: mainReducer,
+    auth: authReducer,
   },
 });
 
